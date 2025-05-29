@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurant Order Management</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .section-bg {
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <header class="bg-white shadow">
+    <div class="container mx-auto px-4 py-6">
+      <h1 class="text-3xl font-bold text-gray-800">Restaurant Order Management System</h1>
+    </div>
+  </header>
+
+  <nav class="bg-gray-800 sticky top-0 z-10">
+    <div class="container mx-auto px-4">
+      <ul class="flex space-x-4 py-4">
+        <li><a href="#indian" class="text-white hover:text-gray-400">Indian</a></li>
+        <li><a href="#continental" class="text-white hover:text-gray-400">Continental</a></li>
+        <li><a href="#french" class="text-white hover:text-gray-400">French</a></li>
+        <li><a href="#desserts" class="text-white hover:text-gray-400">Desserts</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container mx-auto px-4 py-6">
+    <!-- Same sections as you provided (Indian, Continental, French, Desserts) -->
+
+    <section id="indian" class="mb-12">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Indian Dishes</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded shadow p-4">
+          <img src="https://www.licious.in/blog/wp-content/uploads/2020/10/butter-chicken-.jpg" alt="Butter Chicken" class="w-full h-48 object-cover mb-2">
+          <h4 class="text-lg font-semibold">Butter Chicken - ₹250</h4>
+          <button onclick="addToBill('Butter Chicken', 250)" class="mt-2 px-4 py-2 bg-green-500 text-white rounded" type="button">Order</button>
+        </div>
+        <div class="bg-white rounded shadow p-4">
+          <img src="https://vismaifood.com/storage/app/uploads/public/45a/29b/a17/thumb__700_0_0_0_auto.jpg" alt="Masala Dosa" class="w-full h-48 object-cover mb-2">
+          <h4 class="text-lg font-semibold">Masala Dosa - ₹150</h4>
+          <button onclick="addToBill('Masala Dosa', 150)" class="mt-2 px-4 py-2 bg-green-500 text-white rounded" type="button">Order</button>
+        </div>
+        <div class="bg-white rounded shadow p-4">
+          <img src="https://img.freepik.com/premium-photo/paneer-tikka-is-indian-dish-made-from-chunks-cottage-cheese-marinated-spices-grilled-tandoor_466689-76798.jpg?w=740" alt="Paneer Tikka" class="w-full h-48 object-cover mb-2">
+          <h4 class="text-lg font-semibold">Paneer Tikka - ₹200</h4>
+          <button onclick="addToBill('Paneer Tikka', 200)" class="mt-2 px-4 py-2 bg-green-500 text-white rounded" type="button">Order</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="continental" class="mb-12">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Continental Dishes</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded shadow p-4">
+          <img src="https://img.freepik.com/premium-photo/grilled-chicken-half-baked-chicken-with-lemon-spices-delicious-juicy-chicken-grilled-poultry_811830-832.jpg?w=2000" alt="Grilled Chicken" class="w-full h-48 object-cover mb-2">
+          <h4 class="text-lg font-semibold">Grilled Chicken - ₹300</h4>
+          <button onclick="addToBill('Grilled Chicken', 300)" class="mt-2 px-4 py-2 bg-green-500 text-white rounded" type="button">Order</button>
+        </div>
+        <div class="bg-white rounded shadow p-4">
+          <img src="https://wallpapercave.com/wp/wp3063201.jpg" alt="Caesar Salad" class="w-full h-48 object-cover mb-2">
+          <h4 class="text-lg font-semibold">Caesar Salad - ₹180</h4>
+          <button onclick="addToBill('Caesar Salad', 180)" class="mt-2 px-4 py-2 bg-green-500 text-white rounded" type="button">Order</button>
+        </div>
+        <div class="bg-white rounded shadow p-4">
+          <img src="https://res.cloudinary.com/norgesgruppen/images/c_scale,dpr_auto,f_auto,q_auto:eco,w_1600/tulcxcntmwnys5ndgqvk/pasta-alfredo" alt="Pasta Alfredo" class="w-full h-48 object-cover mb-2">
+          <h4 class="text-lg font-semibold">Pasta Alfredo - ₹220</h4>
+          <button onclick="addToBill('Pasta Alfredo', 220)" class="mt-2 px-4 py-2 bg-green-500 text-white rounded" type="button">Order</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="french" class="mb-12">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">French Dishes</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded shadow p-4">
+          <img src="https://c4.wallpaperflare.com/wallpaper/903/513/251/food-croissant-breakfast-strawberry-wallpaper-preview.jpg" alt="Croissant" class="w-full h-48 object-cover mb-2">
+          <h4 class="text-lg font-semibold">Croissant - ₹120</h4>
+          <button onclick="addToBill('Croissant', 120)" class="mt-2 px-4 py-2 bg-green-500 text-white rounded" type="button">Order</button>
+        </div>
+        <div class="bg-white rounded shadow p-4">
+          <img src="https://www.vibrantplate.com/wp-content/uploads/2022/07/Homemade-Classic-French-Ratatouille-02.jpg" alt="Ratatouille" class="w-full h-48 object-cover mb-2">
+          <h4 class="text-lg font-semibold">Ratatouille - ₹220</h4>
+          <button onclick="addToBill('Ratatouille', 220)" class="mt-2 px-4 py-2 bg-green-500 text-white rounded" type="button">Order</button>
+        </div>
+        <div class="bg-white rounded shadow p-4">
+          <img src="https://img.taste.com.au/yzM49jFu/taste/2017/02/classic-quiche-lorraine-121391-2.jpg" alt="Quiche Lorraine" class="w-full h-48 object-cover mb-2">
+          <h4 class="text-lg font-semibold">Quiche Lorraine - ₹250</h4>
+          <button onclick="addToBill('Quiche Lorraine', 250)" class="mt-2 px-4 py-2 bg-green-500 text-white rounded" type="button">Order</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="desserts" class="mb-12">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Desserts</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded shadow p-4">
+          <img src="https://c4.wallpaperflare.com/wallpaper/1018/122/474/food-chocolate-biscuit-coffee-wallpaper-preview.jpg" alt="Chocolate Cake" class="w-full h-48 object-cover mb-2">
+          <h4 class="text-lg font-semibold">Chocolate Coffee - ₹180</h4>
+          <button onclick="addToBill('Chocolate Coffee', 180)" class="mt-2 px-4 py-2 bg-green-500 text-white rounded" type="button">Order</button>
+        </div>
+        <div class="bg-white rounded shadow p-4">
+          <img src="https://wallpapercave.com/wp/wp2992692.jpg" alt="Ice Cream" class="w-full h-48 object-cover mb-2">
+          <h4 class="text-lg font-semibold">Vanilla Ice Cream - ₹100</h4>
+          <button onclick="addToBill('Vanilla Ice Cream', 100)" class="mt-2 px-4 py-2 bg-green-500 text-white rounded" type="button">Order</button>
+        </div>
+        <div class="bg-white rounded shadow p-4">
+          <img src="https://img.freepik.com/premium-photo/tasty-gulab-jamuns-white-background_787273-3418.jpg?w=900" alt="Gulab Jamun" class="w-full h-48 object-cover mb-2">
+          <h4 class="text-lg font-semibold">Gulab Jamun - ₹90</h4>
+          <button onclick="addToBill('Gulab Jamun', 90)" class="mt-2 px-4 py-2 bg-green-500 text-white rounded" type="button">Order</button>
+        </div>
+        <div class="bg-white rounded shadow p-4">
+          <img src="https://www.archanaskitchen.com/images/archanaskitchen/Dessert_Puddings/Creme_caramel_custard_pudding_caramel_custard_Recipe_shutterstock_170464598.jpg" alt="Pudding" class="w-full h-48 object-cover mb-2">
+          <h4 class="text-lg font-semibold">Caramel Pudding - ₹130</h4>
+          <button onclick="addToBill('Caramel Pudding', 130)" class="mt-2 px-4 py-2 bg-green-500 text-white rounded" type="button">Order</button>
+        </div>
+        <div class="bg-white rounded shadow p-4">
+          <img src="https://images5.alphacoders.com/916/916571.jpg" alt="Brownie" class="w-full h-48 object-cover mb-2">
+          <h4 class="text-lg font-semibold">Chocolate Brownie - ₹140</h4>
+          <button onclick="addToBill('Chocolate Brownie', 140)" class="mt-2 px-4 py-2 bg-green-500 text-white rounded" type="button">Order</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cart Section with form -->
+    <section id="cart" class="bg-white rounded shadow p-6">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Your Cart</h2>
+      <form id="orderForm" action="save_order.php" method="post">
+        <ul id="billList" class="mb-4 text-gray-700">
+          <!-- Orders appear here -->
+        </ul>
+        <p id="total" class="text-xl font-semibold mb-6">Total: ₹0</p>
+        <button type="submit" class="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700">Pay Now</button>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    let orders = [];
+    let total = 0;
+
+    function addToBill(item, price) {
+      orders.push({item, price});
+      total += price;
+      updateBill();
+    }
+
+    function updateBill() {
+      const billList = document.getElementById('billList');
+      const totalEl = document.getElementById('total');
+      billList.innerHTML = '';
+      
+      orders.forEach((order, index) => {
+        let li = document.createElement('li');
+        li.textContent = `${order.item} - ₹${order.price}`;
+        billList.appendChild(li);
+
+        // Add hidden inputs for form submission
+        let inputItem = document.createElement('input');
+        inputItem.type = 'hidden';
+        inputItem.name = `items[]`;
+        inputItem.value = order.item;
+        billList.appendChild(inputItem);
+
+        let inputPrice = document.createElement('input');
+        inputPrice.type = 'hidden';
+        inputPrice.name = `prices[]`;
+        inputPrice.value = order.price;
+        billList.appendChild(inputPrice);
+      });
+
+      totalEl.textContent = `Total: ₹${total}`;
+    }
+  </script>
+</body>
+</html>
